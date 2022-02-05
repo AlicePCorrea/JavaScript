@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiroa passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(127, 127, 212);
+            color: white;
+            font: normal 1em arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">clique em mim</div>
+    <div name='teste'> para teste </div>
+    <div id="outra">Outra div para teste</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        p1.style.color = 'blue'
+        corpo.style.background = 'black'
+        
+        document.write(p1.innerHTML)// com innertext só vem o texto, com innerHTML vem a formatação também
+
+       // window.alert(p1.innerText)
+
+       var d = window.document.getElementById('msg')
+       d.style.background = 'green'
+       //d.innerText = 'Estou aguardando...'
+       //window.document.getElementById('msg').innerText = 'Olá'
+       var teste = window.document.getElementsByName('teste')[0]
+       teste.innerText = "eu mudei a escrita"
+       teste.style.background = 'red'
+
+       var outra = window.document.querySelector('div#outra')
+       outra.style.background = 'blue'
+       
+
+    </script>
+</body>
+</html>
